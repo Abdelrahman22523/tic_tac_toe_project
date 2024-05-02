@@ -30,6 +30,9 @@ if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
         confirmationdialog.h confirmationdialog.cpp
         signupdialog.h signupdialog.cpp
         tictactoe.h tictactoe.cpp
+        tic-tac-toe-background1.jpg tic-tac-toe-background2.jpg
+        menu.h
+        menu.cpp
     )
 # Define target properties for Android with Qt 6 as:
 #    set_property(TARGET untitled5 APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
