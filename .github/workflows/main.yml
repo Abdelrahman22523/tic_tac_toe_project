@@ -17,9 +17,9 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y qtbase5-dev qt5-qmake xvfb
 
-      - name: Build and test 'Mytestconfirmationdialog'
+      - name: Build and test 'Mytestmenu'
         run: |
-          cd src/tests/testconfirmationdialog
-          qmake testconfirmationdialog.pro
+          cd testmenu
+          qmake testmenu.pro
           make
-          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytestconfirmationdialog
+          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytestmenu
