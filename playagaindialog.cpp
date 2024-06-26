@@ -1,4 +1,4 @@
-#include "PlayagainDialog.h"
+#include "Playagaindialog.h"
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
