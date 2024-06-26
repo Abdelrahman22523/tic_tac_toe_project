@@ -4,6 +4,8 @@
 #include <QLabel>
 #include <QPixmap>
 #include <QPalette>
+#include <QDebug>
+
 
 ConfirmationDialog::ConfirmationDialog(QWidget *parent)
     : QDialog(parent)
