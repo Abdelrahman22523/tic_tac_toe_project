@@ -1,4 +1,4 @@
-name: Bafana Bafana 
+name: CI\CD
 
 on:
   push:
@@ -12,6 +12,9 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v2
 
+      - name: List repository contents
+        run: ls -R
+
       - name: Install dependencies
         run: |
           sudo apt-get update
@@ -23,5 +26,3 @@ jobs:
           qmake testconfirmationdialog.pro
           make
           xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytestconfirmationdialog
-
-     
