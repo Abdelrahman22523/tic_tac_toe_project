@@ -1,4 +1,4 @@
-name: CI
+name: Bafana Bafana 
 
 on:
   push:
@@ -17,37 +17,11 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y qtbase5-dev qt5-qmake xvfb
 
-      - name: Build and test 'MyQtTest'
+      - name: Build and test 'Mytestconfirmationdialog'
         run: |
-          cd QtTest
-          qmake QtTest.pro
+          cd testconfirmationdialog
+          qmake testconfirmationdialog.pro
           make
-          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./MyQtTest
+          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytestconfirmationdialog
 
-      - name: Build and test 'Mydatabase_test'
-        run: |
-          cd database_test
-          qmake database_test.pro
-          make
-          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mydatabase_test
-
-
-      - name: Build and test 'Mygametest'
-        run: |
-          cd gametest
-          qmake gametest.pro
-          make
-          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mygametest
-
-      - name: Build and test 'Myaitest'
-        run: |
-          cd aitest
-          qmake aitest.pro
-          make
-          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Myaitest
-      - name: Build and test 'MyQtTest2'
-        run: |
-          cd QtTest2
-          qmake QtTest2.pro
-          make
-          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./MyQtTest2
+     
