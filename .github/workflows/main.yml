@@ -30,3 +30,10 @@ jobs:
           qmake testdifficultydialog.pro
           make
           xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytestdifficultydialog
+
+      - name: Build and test 'Mytesthistory'
+        run: |
+            cd testhistory
+            qmake testhistory.pro
+            make
+            xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytesthistory
