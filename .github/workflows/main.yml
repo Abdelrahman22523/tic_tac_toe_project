@@ -1,0 +1,57 @@
+name: CI/CD for tic_tac_toe_project
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
+
+      - name: Install Qt and Dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y qtbase5-dev qt5-qmake xvfb
+
+      - name: Build and Test QtTest
+        run: |
+          cd QtTest
+          qmake QtTest.pro
+          make
+          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./MyQtTest
+
+      - name: Build and Test database_test
+        run: |
+          cd database_test
+          qmake database_test.pro
+          make
+          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mydatabase_test
+
+      - name: Build and Test gametest
+        run: |
+          cd gametest
+          qmake gametest.pro
+          make
+          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mygametest
+
+      - name: Build and Test aitest
+        run: |
+          cd aitest
+          qmake aitest.pro
+          make
+          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Myaitest
+
+      - name: Build and Test QtTest2 
+        run: |
+          cd QtTest2
+          qmake QtTest2.pro
+          make
+          xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./MyQtTest2
