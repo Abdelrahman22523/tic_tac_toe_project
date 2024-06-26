@@ -17,19 +17,22 @@ public:
 signals:
     void registered(const QString &username);
 
-private slots:
+public slots:
+    void setCredentials(const QString &username, const QString &password); // Method to set username and password
     void signup();
-    void goBack(); // Slot for handling back button click
+private slots:
+
+    void goBack();
+    bool registerNewUser(const QString &username, const QString &password);// Slot for handling back button click
 
 private:
     void setupUI();
     bool createConnection();
-    bool registerNewUser(const QString &username, const QString &password);
 
     QLineEdit *usernameEdit;
     QLineEdit *passwordEdit;
     QSqlDatabase db;
-    QPushButton *backButton; // Declare back button
+    QPushButton *backButton;    // Declare back button
 };
 
 #endif // SIGNUPDIALOG_H
