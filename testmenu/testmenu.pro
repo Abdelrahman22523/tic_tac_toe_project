@@ -1,6 +1,6 @@
 QT += testlib
 QT += core gui widgets
-QT += core gui quick sql
+QT += quick sql
 CONFIG += qt warn_on depend_includepath testcase
 
 TEMPLATE = app
@@ -17,18 +17,21 @@ SOURCES +=  tst_test5.cpp \
    ../tictactoe.cpp \
    ../tictactoe1.cpp \
    ../tictactoe2.cpp
-   FORMS += \
-       ../mainwindow.ui
-       HEADERS += \
-           ../confirmationdialog.h \
-           ../difficultydialog.h \
-           ../history.h \
-           ../logindialog.h \
-           ../mainwindow.h \
-           ../menu.h \
-           ../playagaindialog.h \
-           ../signupdialog.h \
-           ../tictactoe.h \
-           ../tictactoe1.h \
-           ../tictactoe2.h
-    TARGET = Mytestmenu
+
+FORMS += \
+   ../mainwindow.ui
+
+HEADERS += \
+   ../confirmationdialog.h \
+   ../difficultydialog.h \
+   ../history.h \
+   ../logindialog.h \
+   ../mainwindow.h \
+   ../menu.h \
+   ../playagaindialog.h \
+   ../signupdialog.h \
+   ../tictactoe.h \
+   ../tictactoe1.h \
+   ../tictactoe2.h
+
+TARGET = Mytestmenu
