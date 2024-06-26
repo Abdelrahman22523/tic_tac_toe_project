@@ -1,4 +1,4 @@
-#include "Playagaindialog.h"
+#include "playagaindialog.h"
 #include <QLabel>
 #include <QPushButton>
 #include <QVBoxLayout>
