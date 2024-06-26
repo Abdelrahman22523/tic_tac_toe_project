@@ -4,6 +4,8 @@
 #include <QPixmap>
 #include <QPalette>
 
+
+
 DifficultyDialog::DifficultyDialog(QWidget *parent) : QDialog(parent) {
     // Load background image (replace with your path to the image)
     QPixmap bkgnd("E:\\2nd year 2nd term assignments\\tic_tac_toe_project\\qt_code\\tic-tac-toe-background1.jpg");

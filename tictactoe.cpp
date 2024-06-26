@@ -1,5 +1,6 @@
 #include "tictactoe.h"
 #include <QMessageBox>
+#include <QDebug>
 
 TicTacToe::TicTacToe(QWidget *parent) : QWidget(parent), currentPlayer('X'), gameOver(false) {
     QGridLayout *layout = new QGridLayout(this);

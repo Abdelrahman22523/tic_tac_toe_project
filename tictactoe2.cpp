@@ -1,5 +1,6 @@
 #include "tictactoe2.h"
 #include <QMessageBox>
+#include <QDebug>
 
 TicTacToe2::TicTacToe2(QWidget *parent) : TicTacToe(parent) {
     resetGame();

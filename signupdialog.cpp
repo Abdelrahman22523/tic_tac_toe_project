@@ -4,7 +4,7 @@
 #include <QLabel>
 #include <QMessageBox>
 #include <QDebug>
-#include <QSqlError>////>
+#include <QSqlError>
 #include <QSqlQuery>>
 SignUpDialog::SignUpDialog(QWidget *parent) : QDialog(parent) {
     setupUI(); // Call setupUI function to initialize UI elements

@@ -7,6 +7,8 @@
 #include "menu.h"
 #include "history.h"
 #include "difficultydialog.h"
+#include <QDebug>
+
 
 int main(int argc, char *argv[]) {
     QApplication app(argc, argv);

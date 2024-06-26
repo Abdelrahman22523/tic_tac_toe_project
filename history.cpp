@@ -3,6 +3,7 @@
 #include <QVBoxLayout>
 #include <QMessageBox>
 #include <QHeaderView> // Include the QHeaderView header file
+#include <QDebug>
 
 History::History(const QString &username, QWidget *parent) : QWidget(parent),
     currentUser(username), model(nullptr)
