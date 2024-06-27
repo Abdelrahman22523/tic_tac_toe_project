@@ -1,5 +1,5 @@
 #include <QtTest/QtTest>
-#include "../PlayAgainDialog.h"
+#include "../playagaindialog.h"
 #include <QPushButton>
 
 class TestPlayAgainDialog : public QObject
