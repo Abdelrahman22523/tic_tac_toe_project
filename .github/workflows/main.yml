@@ -55,6 +55,6 @@ jobs:
       - name: Build and test 'Mytesttictactoe1'
         run: |
                 cd testtictactoe1
-                qmake testtictactoe.pro1
+                qmake testtictactoe1.pro
                 make
-                xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytesttictactoe1
+                xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytesttictactoe2
