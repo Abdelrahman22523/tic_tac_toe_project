@@ -38,9 +38,9 @@ jobs:
             make
             xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytesthistory
 
-      - name: Build and test 'Mytestconfirmationdialog'
+      - name: Build and test 'Mytestplayagaindialog'
         run: |
-            cd testconfirmationdialog
-            qmake testconfirmationdialog.pro
+            cd testplayagaindialog
+            qmake testplayagaindialog.pro
             make
-            xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytestconfirmationdialog
+            xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytestplayagaindialog
