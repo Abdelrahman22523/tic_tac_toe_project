@@ -1,5 +1,7 @@
 #include <QtTest>
 #include <QPushButton>
+#include <QtTest>
+#include <QPushButton>
 #include <QSignalSpy>
 #include "..\confirmationdialog.h"
 
@@ -23,7 +25,7 @@ private slots:
 void ConfirmationDialogTest::initTestCase()
 {
     dialog = new ConfirmationDialog();
-    dialog->show(); // Optional: Show the dialog for visual inspection
+    // dialog->show(); // Optional: Show the dialog for visual inspection
 }
 
 void ConfirmationDialogTest::cleanupTestCase()
@@ -36,7 +38,7 @@ void ConfirmationDialogTest::testButton1vs1Click()
     QSignalSpy spy(dialog, &ConfirmationDialog::gameModeSelected);
 
     // Simulate a click on the "1 VS 1" button
-    QPushButton *button1vs1 = dialog->findChild<QPushButton*>("button1vs1");
+    QPushButton button1vs1 = dialog->findChild<QPushButton>("button1vs1");
     QVERIFY2(button1vs1 != nullptr, "Button '1 VS 1' not found.");
     QTest::mouseClick(button1vs1, Qt::LeftButton);
 
@@ -50,7 +52,7 @@ void ConfirmationDialogTest::testButton1vsAIClick()
     QSignalSpy spy(dialog, &ConfirmationDialog::gameModeSelected);
 
     // Simulate a click on the "1 VS AI" button
-    QPushButton *button1vsAI = dialog->findChild<QPushButton*>("button1vsAI");
+    QPushButton button1vsAI = dialog->findChild<QPushButton>("button1vsAI");
     QVERIFY2(button1vsAI != nullptr, "Button '1 VS AI' not found.");
     QTest::mouseClick(button1vsAI, Qt::LeftButton);
 
@@ -64,7 +66,7 @@ void ConfirmationDialogTest::testBackButtonClick()
     QSignalSpy spy(dialog, &ConfirmationDialog::gameModeSelected);
 
     // Simulate a click on the "Back" button
-    QPushButton *buttonBack = dialog->findChild<QPushButton*>("buttonBack");
+    QPushButton buttonBack = dialog->findChild<QPushButton>("buttonBack");
     QVERIFY2(buttonBack != nullptr, "Button 'Back' not found.");
     QTest::mouseClick(buttonBack, Qt::LeftButton);
 
