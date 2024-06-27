@@ -3,7 +3,7 @@
 #include <QtTest>
 #include <QPushButton>
 #include <QSignalSpy>
-#include "..\confirmationdialog.h"
+#include "confirmationdialog.h"
 
 class ConfirmationDialogTest : public QObject
 {
