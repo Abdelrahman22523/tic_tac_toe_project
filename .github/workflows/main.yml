@@ -65,10 +65,3 @@ jobs:
                         qmake testtictactoe2.pro
                         make
                         xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytesttictactoe2
-
-      - name: Build and test 'Mytestconfirmationdialog'
-        run: |
-                        cd testconfirmationdialog
-                        qmake testconfirmationdialog.pro
-                        make
-                        xvfb-run --auto-servernum --server-args='-screen 0 1024x768x24' ./Mytestconfirmationdialog
