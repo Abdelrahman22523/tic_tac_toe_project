@@ -1,3 +1,3 @@
 # tic_tac_toe
-### XO
+### XO game project 
 
